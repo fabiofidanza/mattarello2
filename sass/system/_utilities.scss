@@ -1,0 +1,111 @@
+
+@mixin fullBg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+@mixin bgOverlay {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+}
+
+@mixin bottomShadow {
+  @include box-shadow(0 5px 0 0 $shadowColor);  
+}
+
+@mixin topShadow {
+  @include box-shadow(0 -5px 0 0 $shadowColor);  
+}
+
+@mixin button {
+  cursor: hand;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin anchor {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: hand;
+  cursor: pointer;
+}
+
+@mixin lastNoMargin {
+  *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@mixin triangle($direction, $color: currentcolor, $size: 1em) {
+  @if not index(top right bottom left, $direction) {
+    @error "Direction must be either `top`, `right`, `bottom` or `left`.";
+  }
+
+  width: 0;
+  height: 0;
+  content: '';
+  border-#{opposite-position($direction)}: $size solid $color;
+
+  $perpendicular-borders: $size solid transparent;
+
+  @if $direction == top or $direction == bottom {
+    border-left: $perpendicular-borders;
+    border-right: $perpendicular-borders;
+  }
+  @else if $direction == right or $direction == left {
+    border-bottom: $perpendicular-borders;
+    border-top: $perpendicular-borders;
+  }
+}
+
+@mixin interfaceAnchor {
+  text-decoration: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: hand;
+  cursor: pointer;
+}
+
+@mixin blur ($radius) {
+  -webkit-filter: blur($radius+px); /* Chrome, Safari */
+  -ms-filter: blur($radius+px); /* IE12? */
+  filter: url("data:image/svg+xml;utf8,<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"blur\"><feGaussianBlur stdDeviation=\"#{$radius}\" /></filter></svg>#blur"); /* Firefox, Safari, Chrome*/
+  filter: progid:DXImageTransform.Microsoft.Blur(Strength=$radius); /* IE9 */
+}
+
+
+
+$triggerGPUtransform: translate3d(0,0,0);
+
+@mixin subPixelAntialias {
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}

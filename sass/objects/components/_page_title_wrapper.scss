@@ -1,0 +1,33 @@
+// page-title-wrapper //
+
+.page-title-wrapper {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  box-shadow: 0 5px 0 0 rgba(0,0,0,0.1);
+  background: $white;
+  color: $primaryColor;
+  position: relative;
+  z-index: 20; 
+  
+  h1 {
+      display: block;
+      font-size: $hugeFontSize;
+      text-transform: uppercase;
+      text-align: left;
+      margin-left: -0.05em;
+      color: $primaryColor;
+      line-height: 1;
+      padding-bottom: 0;
+  }
+  
+  &.negative {
+    background: $primaryColor;
+    color: $white;
+    
+    h1 {
+      color: $white;
+    }
+
+  }
+
+}

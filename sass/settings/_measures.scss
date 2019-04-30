@@ -1,0 +1,60 @@
+/* typography measures */
+$baseFontSize: 22px;
+
+//$textLineHeight: 1.44;
+$textLineHeight: 1.4;
+$titleLineHeight: 0.9;
+
+$maxLineLength: 35em;
+
+$articleBodyWidth: 820px;
+
+
+
+/* text sizes */
+$heroFontSize: 3rem;
+$hugeFontSize: 1.8rem;
+$bigFontSize: 1.4rem;
+$normalFontSize: 1rem;
+$smallFontSize: 0.75rem;
+$tinyFontSize: 0.5rem;
+
+/* radiuses */
+
+$photoRoundRadius: 50%;
+$formGroupRadius: 5px;
+$formRadius: 8px;
+$filledAreaRadius: 5px;
+
+$blockRadius: 10px;
+
+/* icons */
+
+$smallIconSize: 16px;
+$largeIconSize: 32px;
+$mediumIconSize: 48px;
+$hugeIconSize: 64px;
+$infographicIconSize: 64px;
+
+/* animation stuff */
+$transitionDuration: 0.1s;
+$transitionEasing: linear;
+
+/* block sizes */
+
+$teaserHeight: 180px;
+
+$heroHeight: 25vw;
+
+$regioneIconHeight: 100px;
+
+/* forms */
+$fieldHeight: 50px;
+
+/* opacity */
+
+$unselectedOpacity: 0.4;
+
+/* the website's header take the height from the logo  */
+
+$logoHeight: 80px;

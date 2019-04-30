@@ -1,0 +1,227 @@
+<div class="main-content-wrapper">
+  <div class="container with-content text-container v-padded">
+    <h3 class="hanging h2-number-0" data-h2-id="h2-number-0">Larghezza di blocchi</h3>
+    <p>
+      Il contenuto delle pagine del sito è mantenuto all'interno di una larghezza coerente attraverso l'utilizzo della griglia (vedi sezione apposita).
+    </p>
+    <p>
+      Qualora un elemento debba occupare tutta la larghezza della finestra sarà sufficiente non utilizzare nessuna classe.
+    </p>
+  </div>
+  <div class="show-source">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="filled padded">
+            Elemento su 12 colonne (.col-12)
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="v-padded">
+      <div class="filled padded">
+        elemento a larghezza piena
+      </div>
+    </div>
+    
+  </div>
+  <div class="container with-content text-container v-padded">
+    <p>
+      È possibile, tuttavia, utilizzare blocchi di larghezza ridotta, rispettivamente al 75% della larghezza standard o al 50%.
+    </p>
+  </div>
+  <div class="show-source">
+    <div class="container width-75 v-padded-half">
+      <div class="filled padded">
+        .width-75
+      </div>
+    </div>
+    <div class="container width-50">
+      <div class="filled padded">
+        .width-50
+      </div>
+    </div>
+    
+  </div>
+  <div class="container with-content text-container v-padded">
+    <h3 class="hanging h2-number-1" data-h2-id="h2-number-1">Sfondo colorato</h3>
+    <p>
+      È possibile applicare a un blocco uno sfondo leggero applicando la classe <code>
+        filled</code>
+    </p>
+    <p>
+      Un elemento <code>
+        filled</code>
+      dentro un elemento <code>
+        filled</code>
+      avrà colore bianco
+    </p>
+  </div>
+  <div class="show-source">
+    <div class="container with-content v-padded-half">
+      <div class="filled padded">
+        .filled
+      </div>
+    </div>
+    <div class="container with-content v-padded-half">
+      <div class="filled padded">
+        <div class="filled padded">
+          .filled dentro .filled
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div class="container with-content text-container v-padded">
+    <h3 class="hanging h2-number-2" data-h2-id="h2-number-2">Sfondo con immagini</h3>
+    <p>
+      Per riempire un elemento con un immagine di sfondo, coprendone l'intera superficie è possibile applicare la classe <code>
+        full-bg</code>
+      , oltre a specificare il <code>
+        background-image</code>
+      tramite CSS esterno o attributo <code>
+        style</code>
+    </p>
+  </div>
+  <div class="show-source">
+    <div class="container with-content v-padded-half">
+      <div class="full-bg padded" style="background-image: url(/sites/all/modules/custom/stc_style_guide/img/sample-bg.jpg)">
+        Questo elemento ha classe full-bg.
+        <br>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus labore aperiam cupiditate quos id corporis quas ratione porro nam ab odit voluptatum laudantium. Iusto minus neque ipsam consequatur cupiditate at quas a autem necessitatibus suscipit. Cumque ipsa hic laborum ullam.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas nulla minima sit eum obcaecati. Nemo beatae fugit amet facilis dolores.
+        </p>
+      </div>
+    </div>
+    
+  </div>
+  <div class="container with-content text-container v-padded">
+    <p>
+      È possibile controllare l'allineamento dello sfondo in 9 posizioni attraverso le classi:
+    </p>
+    <ul>
+      <li>
+        <code>
+          bg-align-top-left</code>
+      </li>
+      <li>
+        <code>
+          bg-align-top-center</code>
+      </li>
+      <li>
+        <code>
+          bg-align-top-right</code>
+      </li>
+      <li>
+        <code>
+          bg-align-center-left</code>
+      </li>
+      <li>
+        <code>
+          bg-align-center-center</code>
+      </li>
+      <li>
+        <code>
+          bg-align-center-right</code>
+      </li>
+      <li>
+        <code>
+          bg-align-bottom-left</code>
+      </li>
+      <li>
+        <code>
+          bg-align-bottom-center</code>
+      </li>
+      <li>
+        <code>
+          bg-align-bottom-right</code>
+      </li>
+    </ul>
+    <p>
+      ad esempio:
+    </p>
+  </div>
+  <div class="show-source">
+    <div class="container with-content v-padded-half">
+      <ul class="n-up up 3 center-n-up-lists-processed">
+        <li>
+          <div class="full-bg padded bg-align-top-center" style="background-image: url(/sites/all/modules/custom/stc_style_guide/img/sample-bg.jpg)">
+            bg-align-top-center
+          </div>
+        </li>
+        <li>
+          <div class="full-bg padded bg-align-center-center" style="background-image: url(/sites/all/modules/custom/stc_style_guide/img/sample-bg.jpg)">
+            bg-align-center-center
+          </div>
+        </li>
+        <li>
+          <div class="full-bg padded bg-align-bottom-center" style="background-image: url(/sites/all/modules/custom/stc_style_guide/img/sample-bg.jpg)">
+            bg-align-bottom-center
+          </div>
+        </li>
+      </ul>
+    </div>
+    
+  </div>
+  <div class="container with-content text-container v-padded">
+    <h3 class="hanging h2-number-3" data-h2-id="h2-number-3">Spaziatura interna</h3>
+    <p>
+      È possibile applicare spaziatura interna su tutti i lati, solo in orizzontale, solo in verticale, singola, ridotta e doppia, come da esempio (e combinare le varie classi):
+    </p>
+  </div>
+  <div class="show-source">
+    <div class="container">
+      <ul class="n-up up-3 center-n-up-lists-processed">
+        <li>
+          <div class="filled padded">
+            .padded
+          </div>
+        </li>
+        <li>
+          <div class="filled v-padded">
+            .v-padded
+          </div>
+        </li>
+        <li>
+          <div class="filled h-padded">
+            .h-padded
+          </div>
+        </li>
+        <li>
+          <div class="filled padded-half">
+            .padded-half
+          </div>
+        </li>
+        <li>
+          <div class="filled v-padded-half">
+            .v-padded-half
+          </div>
+        </li>
+        <li>
+          <div class="filled h-padded-half">
+            .h-padded-half
+          </div>
+        </li>
+        <li>
+          <div class="filled v-padded-double">
+            .v-padded-double
+          </div>
+        </li>
+        <li>
+          <div class="filled v-padded-top">
+            .v-padded-top
+          </div>
+        </li>
+        <li>
+          <div class="filled v-padded-bottom">
+            .v-padded-bottom
+          </div>
+        </li>
+      </ul>
+    </div>
+    
+  </div>
+</div>

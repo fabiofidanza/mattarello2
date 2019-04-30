@@ -1,0 +1,336 @@
+$tabletBreakPoint: 1023px;
+$mobileBreakPoint: 767px;
+
+$rowWidth: 980px;
+$colPadding: 20px;
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin container() {
+  max-width: $rowWidth;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@mixin container-with-content() {
+  max-width: $rowWidth;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: $colPadding;
+  padding-right: $colPadding;
+}
+
+.container {
+
+  @include container();
+  
+  &.with-content {
+    padding-left: $colPadding;
+    padding-right: $colPadding;
+  }
+  
+}
+
+@mixin row() {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  padding: 0;
+  margin: 0;
+}
+
+.row {
+
+  @include row();
+  
+  &.collapse {
+    .col {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  
+  &.no-margin {
+    
+   > [class^="col"]:first-child {
+     padding-left: 0;
+   } 
+   
+   > [class^="col"]:last-child {
+     padding-right: 0;
+   }  
+    
+  }
+    
+}
+
+@mixin col($n:false) {     
+  display: table-cell;
+  padding-left: $colPadding;
+  padding-right: $colPadding; 
+  
+  @if $n {
+    width: percentage(1 / (12 / $n));
+  }
+    
+}
+
+@for $i from 1 through 12 {
+  .#{col}-#{$i} {
+   
+    @include col($i);
+    vertical-align: top;
+
+  }
+  
+  .row.collapse {
+    .#{col}-#{$i} {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+}
+
+/* push and pull, desktop only */
+
+@media only screen and (min-width: $mobileBreakPoint+1) {
+  
+  @for $i from 1 through 12 {
+    .#{push}-#{$i} {
+      position: relative;
+      left: percentage(1 / (12 / $i));
+    }
+    
+    .#{pull}-#{$i} {
+      position: relative;
+      left: - percentage(1 / (12 / $i));
+    }
+  }
+}
+
+.row.border {
+  & > *[class*="col"] {
+    border: 1px solid $black;
+  }
+}
+
+.row.vcenter {
+  vertical-align: middle;
+
+  > *[class*="col"] {
+    vertical-align: middle;
+  }  
+}
+
+.row.vbottom {
+  vertical-align: bottom;
+
+  > *[class*="col"] {
+    vertical-align: bottom;
+  }  
+}
+
+.row.auto {
+  width: 100%;
+  table-layout: auto;
+}
+
+
+
+.col {
+  @include col();
+}
+
+.col.center {
+  text-align: center;
+}
+
+.vcenter {
+  vertical-align: middle;
+}
+
+.col-full {
+  padding-left: $colPadding;
+  padding-right: $colPadding;
+}
+
+.n-up { 
+  padding: 0;
+
+  @include clearfix;
+
+  //margin-left: -$colPadding;
+  //margin-right: -$colPadding;
+  // causavano bug
+  margin-left: 0;
+  margin-right: 0;
+
+  > li {
+    width: 33.3%;
+    display: block;
+    float: left;
+    margin-bottom: $colPadding;
+    vertical-align: top;
+    padding-left: $colPadding;
+    padding-right: $colPadding;
+  }
+  
+  &.single-short-row {
+    
+    text-align: center;
+    
+    > li {
+      display: inline-block;
+      text-align: left;
+      float: none;
+    }
+    
+  }
+}
+
+
+@for $i from 1 through 12 {
+  .up-#{$i} {
+    > li {
+      width: percentage(1 / $i);
+      
+      &:nth-child(#{$i}n+1) {
+        clear: left;
+      }
+    }
+  }
+}
+
+/**
+ *
+FOR REFERENCE
+
+.col-1 {
+  width: 8.333333%;
+  display: table-cell;
+}
+
+.col-2 {
+  width: 16.666667%;
+display: table-cell;
+}
+
+.col-3 {
+  width: 25%;
+  display: table-cell;
+}
+
+.col-4 {
+  width: 33.333333%;
+  display: table-cell;
+}
+
+.col-5 {
+  width: 41.666667%;
+  display: table-cell;
+}
+
+.col-6 {
+  width: 50%;
+  display: table-cell;
+}
+
+.col-7 {
+  width: 58.333333%;
+  display: table-cell;
+}
+
+.col-8 {
+  width: 66.666667%;
+  display: table-cell;
+}
+
+.col-9 {
+  width: 75%;
+  display: table-cell;
+}
+
+.col-10 {
+  width: 83.333333%;
+  display: table-cell;
+}
+
+.col-11 {
+  width: 91.666667%;
+  display: table-cell;
+}
+
+.col-12 {
+  width: 100%;
+  display: table-cell;
+}
+
+*/
+
+@media only screen and (max-width: $mobileBreakPoint) {
+ 
+  .row {
+    display: table;
+    width: 100%;
+  }
+  
+  .row.mobile-stack {
+    display: block;
+  }
+  
+  .col {
+    display: block;
+    width: 100%;
+  }
+  
+  .mob-stack {
+    display: block;
+  }
+
+  @for $i from 1 through 12 {
+    .#{col}-#{$i} {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  @for $i from 1 through 12 {
+    .#{mob}-#{$i} {
+      width: percentage(1 / (12 / $i));
+      display: table-cell;
+      vertical-align: top;
+      padding-left: $colPadding;
+      padding-right: $colPadding;
+    }
+  }
+
+  .n-up > li,
+  .n-up.auto-width > li {  
+    display: block;
+    width: 100%;
+    float: none;
+  } 
+  
+  @for $i from 1 through 12 {
+    .mobile-n-up-#{$i} {
+      > li {
+        width: percentage(1 / $i);
+        
+        &:nth-child(#{$i}n+1) {
+          clear: left;
+        }
+      }
+    }
+  }
+
+
+
+  
+  
+  
+}

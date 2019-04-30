@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+.expander {
+  @include anchor; 
+  position: relative;
+  padding-left: 1.5em;
+  padding-right: 1em;
+  
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @extend .iconExpand !optional;
+    @include transition(transform 0.2s linear);
+  }
+  
+  &.open:before {
+    @include transform(rotate(180deg));
+  }
+  
+  &.no-icon {
+    padding-left: 0;
+  }
+  
+  &.no-icon:before {
+    display: none;
+  }
+  
+  & + .expandable {
+    padding-left: 1.5em;
+  }
+}

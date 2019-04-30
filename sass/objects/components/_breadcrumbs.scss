@@ -1,0 +1,28 @@
+// breadcrumbs //
+
+.breadcrumbs li {
+    display: inline-block;
+    margin-bottom: auto;
+    padding-left: 0;
+    &:before {
+      content: none; // sovrascrive text-container li:before che crea delle linee
+    }
+    a {
+      color: $primaryColor;
+      text-decoration: none;
+      user-select: none;
+      cursor: pointer;
+      font-size: $smallFontSize;
+      
+      .negative & {
+        color: $white;
+      } 
+    }
+    &:after {
+      content: "\2192";
+      margin: 0 0.2em 0 0.2em;
+      font-size: $smallFontSize;
+    }
+      
+}
+

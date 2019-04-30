@@ -1,0 +1,526 @@
+input, textarea, select {
+  border: 1px solid $transGrey;
+  padding: 5px 10px;
+  font-size: 1rem; 
+  background: $white;
+  color: $black;
+  @include copyFontLight;
+ 
+  &.disabled { 
+    @include user-select(none);
+    background: $disabledInput !important;
+  }
+}
+
+select {
+  max-width: 100%;
+}
+
+input[type=checkbox] {
+  @include box-shadow(none);
+}
+
+input[type=submit] {
+  -webkit-appearance: none;
+}
+
+input {
+  
+  max-width: 100%;
+  
+  &.tel {
+    border: 1px solid $subtleColor;
+    font-size: 30px;
+    color: $subtleColor;
+    padding: 10px;
+  }
+  
+
+  &.underline {
+    @include box-shadow(none); 
+    border: $formFieldBorder;
+    border-width: 0 0 1px 0;
+    padding: 5px;
+    position: relative;
+    height: $fieldHeight;  
+  }
+
+  &.error {
+    @include box-shadow(0 0 6px 2px $errorColor inset);
+    border: none;
+    -webkit-appearance: none;
+  }
+  
+    
+  &[type="radio"] {
+    height: auto !important;
+  }
+   
+}
+
+.form-type-checkbox{
+  
+  input {
+    display: inline-block;
+  }
+  
+  label {
+    display: inline;
+  }
+  
+}
+
+.field-group {
+  padding-top: $colPadding;
+  @include border-radius($formGroupRadius);
+  
+  h3 {
+    @include copyFontBold;
+    
+@include container();
+    @extend .with-content;
+    color: $errorColor;
+    margin-bottom: $colPadding;
+  }
+  
+  &.expand-above {
+    background: $fillColor;
+    padding: $colPadding;
+    margin-bottom: $colPadding;
+  }
+}
+
+.inline-fields {
+  input, .form-item {
+    display: inline-block;
+    width: auto;
+  }
+}
+
+.fields-box {
+  border: 1px solid $subtleColor;
+  background: $white;
+  @include box-shadow(0 0 3px 3px rgba(0,0,0,0.1) inset);
+  margin-bottom: $colPadding * 2;
+    
+  &.collapse-fields {
+    padding-top: 0;
+    margin-left: $colPadding;
+    margin-right: $colPadding;
+    .row {
+      @extend .row.collapse;   
+        
+      *[class*="col"] {
+        border-left: $formFieldBorder;
+        
+        &:nth-child(1) {
+          border-left: 0;
+        }
+      }   
+    }
+    
+    .field-container {
+      padding-bottom: 0;
+      min-height: $fieldHeight;
+      //height: $fieldHeight;
+      vertical-align: middle;
+    }
+    
+    input, textarea {
+      background: transparent;
+      padding-left: $colPadding / 2;
+    }
+  }
+ 
+}
+
+.field-with-icon {
+  
+  padding-left: 30px;   
+  position: relative;
+
+  padding-left: $fieldHeight !important;
+  
+
+  &:before {      
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: $largeIconSize;
+    color: $iconColor;
+  }
+      
+
+    
+}
+
+.field-inline-label {
+  
+  /*
+   * labels can be put inside a markup component
+   */
+  .webform-component-markup {
+    display: inline-block;
+  }
+  
+  label, .form-radios {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .form-radios {
+    line-height: $fieldHeight;
+  }
+  
+  label {
+    line-height: $fieldHeight;
+    margin-right: 1em;
+  }
+  
+  &.field-with-icon {
+    label {
+      padding-left: $colPadding / 2;
+    }
+  }
+}
+
+form {
+  
+  position: relative;
+  
+  input, textarea, select, option {
+    @include copyFont;
+    color: $black;
+  }
+  
+  .description {
+    @include copyFont;  
+    
+    font-size: $tinyFontSize;
+    background: $white;
+    padding: $colPadding / 3;
+    position: relative;    
+    margin-top: 10px;
+    
+    &:before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      @include triangle(top, $white, 10px);
+    }
+  }
+  
+  .field-container {  
+    position: relative;
+    padding-bottom: $colPadding;  
+    
+    .show-description {
+      position: absolute;
+      right: 8px;
+      top: 8px;
+      
+       
+      &:before {
+        color: $subtleColor;
+        font-size: 32px;
+      }
+    }
+    
+    &.with-hint {
+      padding-right: 20px;
+      
+      .description {
+        position: absolute;
+        right: 40px;
+        top: 30px;
+        @extend .form-tooltip; 
+      }
+    }
+    
+    &.required {
+      position: relative;
+      
+      label .form-required {
+        display: none;
+      }
+      
+      &:after {
+        position: absolute;
+        content: "*";
+        top: 5px;
+        right: 5px;
+        color: $errorColor;
+        font-size: 18px;
+      }
+    }
+    
+    &.field-no-border {
+      input {
+        border: none;
+      }
+    }
+    
+    &.full-width-fields {
+      input, textarea {
+        width: 100%;
+      }
+    }
+  }
+}
+
+label {
+  
+  @include copyFont;
+  color: $labelColor;
+  display: block;
+  
+  /*
+   * no placeholder support
+   */
+  &.no-ph {
+    padding: 10px 0 10px 10px;
+    font-size: $tinyFontSize;
+  }
+  
+  &.error {
+    /*
+     * TODO: responsive
+     */
+    
+    display: none !important;
+    background: $formErrorColor;
+    @include copyFontBold;
+    padding: $colPadding / 2;
+    color: $white;
+    text-align: center;
+    position: relative;
+    top: $colPadding / 2;
+
+    &:before {
+      position: absolute;
+      content: "";
+      @include triangle(top, $formErrorColor, 10px);
+      top: -5px;
+      left: 50%;
+      margin-left: -10px;
+    }
+
+    .show-errors & {
+      display: block !important;
+    
+      &[style*="none"] {
+        display: none !important;
+      }
+    }
+    
+    
+
+  }
+ 
+  .radio-option &, .form-item.form-type-radio & {
+    color: $black;
+    display: inline-block;
+    vertical-align: baseline;
+  } 
+  
+  .radio-options &, .form-item.form-type-radio & {
+    display: inline-block;
+    vertical-align: baseline;
+  }
+  
+  &.option {
+    padding-left: 0 !important;
+  }
+}
+
+.radio-option, .form-item.form-type-radio {
+  display: inline-block;
+}
+
+/*
+ * radio as button
+ */
+
+//.radio-as-button 
+.form-radios.as-buttons {
+  
+  margin-top: 7px;
+  @include interfaceAnchor;
+     
+  input {
+     border: 0; 
+     clip: rect(0 0 0 0); 
+     height: 1px; margin: -1px; 
+     overflow: hidden; 
+     padding: 0; 
+     position: absolute; 
+     width: 1px;
+  }
+  
+  .radio-option, .form-item.form-type-radio {
+    display: block;
+    float: left;
+    
+    &:first-child label {
+      border-width: 1px 1px 1px 1px;
+      border-radius: 5px 0 0 5px;
+    }
+    &:last-child label {
+      border-width: 1px 1px 1px 0;
+      border-radius: 0 5px 5px 0;
+    }
+  }
+  
+  .form-item.form-type-radio {
+    
+    margin-bottom: $colPadding / 2;
+  
+    label {
+      position: relative;
+      display: inline-block;
+      line-height: 1.3;
+      margin: 0;
+      color: $textColor;
+      padding: $colPadding / 3 10px !important;
+      background: transparentize($white,0.8);
+      @include interfaceAnchor;
+      @include transition(padding 0.3s ease);
+      border: 1px solid $transGrey;
+    }
+
+    
+    input:checked + label,
+    label:hover {
+      background: $primaryColor;
+      color: $white;
+    }
+    
+    
+    input.error + label {
+      @include box-shadow(0 0 6px 2px $errorColor);
+    }
+    
+  } 
+
+}
+
+.inline-dropdown {
+  @include interfaceAnchor;
+  border-bottom: 2px dotted $disabledInput;
+}
+
+.hide-label label {
+  display: none;
+}
+
+/* file upload */
+
+.form-managed-file {
+  
+  input[type="file"] {
+    width: auto !important;
+    margin-right: $colPadding;
+    margin-bottom: $colPadding / 2;
+  }
+  
+  .file {
+    margin-bottom: 0.5em;
+  }
+  
+  input[type="submit"] {
+    @extend .action;
+    @extend .light;
+    @extend .tiny;
+    width: auto !important;
+  }
+  
+}
+
+/* webform */
+
+.webform-submit {
+  @extend .action;
+}
+
+/* tooltips */
+
+.form-tooltip {
+  font-size: $tinyFontSize;
+  
+  background: $white;
+ 
+  width: 300px;
+  border: 1px solid $disabledInput;
+  
+  padding: $colPadding / 2;
+  z-index: 8000;
+  color: $black;
+  text-align: left;
+  @include box-shadow(0 5px 3px 1px rgba(0,0,0,0.3));
+}
+
+
+
+/*
+ * chosen
+ */
+
+.chosen-container {
+    font-size: 1rem;
+  }
+  
+/*
+ * required fields information
+ */
+
+
+.required-notice {
+  font-size: $tinyFontSize;
+ 
+ /* 
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  text-align: right;
+  @include transform(rotate(-90deg));
+  @include transform-origin(100%, 0);
+  */
+      
+  span {
+    color: $errorColor;
+  }
+}
+
+
+/*
+ * placeholders
+ */
+
+
+::-webkit-input-placeholder {
+   color: $placeholderColor;
+   padding-right: 10px;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: $placeholderColor;  
+   padding-right: 10px;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $placeholderColor;  
+   padding-right: 10px;
+}
+
+:-ms-input-placeholder {  
+   color: $placeholderColor;  
+   padding-right: 10px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+  

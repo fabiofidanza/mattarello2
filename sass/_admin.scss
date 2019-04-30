@@ -1,0 +1,116 @@
+#admin-menu, #admin-menu .dropdown {
+  z-index: 99999;
+}
+
+#admin-toolbar {
+  
+  &, * {
+    box-sizing: content-box;
+  }
+  
+}
+
+#admin-menu {
+  z-index: 40000;
+}
+
+  
+#admin-toolbar * {
+  box-sizing: content-box;
+}
+
+
+.administrative-links {
+  float: left;
+  position: fixed;
+  z-index: 9000000;
+  bottom: 10px;
+  right: 10px;
+
+  background: rgba(255,255,255,0.9);
+  width: 250px;
+  border: 2px solid $midGrey;
+  
+
+     
+  ul {
+      padding: 10px;
+      border-bottom: 1px solid $black;
+      
+      &:last-of-type {
+        border-bottom: none;
+      }  
+  }   
+  
+  li {
+    margin-bottom: 10px;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+     
+  a, h2 {
+    @include titleFont;
+    text-decoration: none;
+    color: $black;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    display: block;  
+  } 
+  
+  h2 {
+    padding: 10px;
+    background: black;
+    color: $white;
+    text-align: center;
+    position: relative;
+    @include interfaceAnchor;
+  } 
+  
+  
+  
+  .toggle {
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    right: 10px;
+    @include transform( translateY(-50%) ); 
+    width: 16px;
+    height: 16px;
+
+    &:before {
+      @extend .iconExpand;
+      display: block;
+      color: $white;  
+      font-size: 16px;
+      @include transition(all $transitionDuration linear);
+    }
+  }
+  
+  &.collapsed .toggle:before {
+    @include transform(rotate(-180deg));
+  }
+  
+  .dashboard-link {
+    color: $red;
+  }
+  
+}
+
+.logged-in {
+  
+  
+  .ui-banner,
+  .ui-banners,
+  .ui-content,
+  .ui-links {
+    position: relative;
+  }
+    
+}
+
+
+a.contextual-links-trigger {
+    display: block !important;
+}

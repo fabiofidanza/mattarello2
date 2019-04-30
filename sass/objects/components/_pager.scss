@@ -1,0 +1,35 @@
+.pager {
+  display: block;
+  width: 100%;
+  
+  text-align: center;
+  
+  li {
+    display: inline-block;
+    @include border-radius(2px); 
+    margin: 0 2px;
+    
+    &.pager-current {
+      background: $primaryColor;
+      color: $white;  
+      padding: 2px 7px;
+    }
+    
+    a {
+      display: block;
+      padding: 2px 7px;
+      text-decoration: none;
+      color: $black;
+      background: #f2f2f2;
+      @include transition(all $transitionDuration $transitionEasing);
+      
+      &:hover {
+        color: $white;
+        background: $primaryColor;
+      }
+    } 
+    
+    
+  }
+  
+}

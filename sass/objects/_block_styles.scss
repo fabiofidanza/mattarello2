@@ -1,0 +1,248 @@
+/* general purpose formatting for blocks */
+
+.padded {
+  padding: $colPadding * 2;
+}
+
+.padded-half {
+  padding: $colPadding;
+}
+
+.padded-double {
+  padding: $colPadding * 4;
+}
+
+.v-padded {
+  padding-top: $colPadding * 2;
+  padding-bottom: $colPadding * 2;  
+}
+
+.v-padded-half {
+  padding-top: $colPadding;
+  padding-bottom: $colPadding;  
+}
+
+.v-padded-double {
+  padding-top: $colPadding * 4;
+  padding-bottom: $colPadding * 4;  
+}
+
+.v-padded-top {
+  padding-top: $colPadding * 2;
+}
+
+.v-padded-bottom {
+  padding-bottom: $colPadding * 2;  
+}
+
+.h-padded {
+  padding-left: $colPadding * 2;
+  padding-right: $colPadding * 2;  
+}
+
+.h-padded-half {
+  padding-left: $colPadding;
+  padding-right: $colPadding;  
+}
+
+
+.h-padded-double {
+  padding-left: $colPadding * 4;
+  padding-right: $colPadding * 4;   
+}
+
+
+.with-border {
+ // border-top: $stripeSeparator;
+ //  border-bottom: $stripeSeparator;
+/*
+  position: relative;
+  
+  &:after {
+    position: absolute;
+    bottom: -200px;
+    left: 50%;
+    margin-left: -200px;
+    @extend .iconOrganicLine;
+    display: block;
+    text-align: center;
+    color: $biscuit;
+    font-size: 400px;
+  }
+*/
+  + .with-border {
+    border-top: none;
+  }
+}
+
+.bottom-padded {
+  padding-bottom: $colPadding * 2;  
+}
+
+.filled {
+  background: $fillColor;
+  color: $white;
+  
+  .filled {
+    background: $white;
+    color: $textColor;
+  }
+  
+  /* if padding a row, compensate column padding
+   * on outmost columns
+   */
+  &.row {
+    padding-top: $colPadding;
+  }
+  
+}
+
+.with-bg {
+  position: relative;
+  background-repeat: no-repeat;
+  
+  figure {
+    display: none;
+  }
+  
+  &.bg-cover {
+    @include fullBg;  
+  }
+    
+}
+
+
+
+/* block width */
+
+.width-75 {
+  max-width: $rowWidth * 0.75;
+  margin: 0 auto;
+}
+
+.width-50 {
+  max-width: $rowWidth * 0.5;
+  margin: 0 auto;
+}
+
+/* block min height */
+
+.min-height-30 {
+  min-height: 30vh;
+}
+
+.min-height-50 {
+  min-height: 50vh;
+}
+
+.min-height-70 {
+  min-height: 70vh;
+}
+
+/* background */
+
+.full-bg {
+  @include fullBg;
+}
+
+.with-white-overlay,
+.with-black-overlay {
+  position: relative;
+  
+  .content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  &:before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;  
+    z-index: 0;
+  }
+}
+
+.with-white-overlay {
+  &:before {
+    background-color: $transWhite;
+  }
+}
+
+.with-black-overlay {
+  &:before {
+    background-color: $transBlack;
+  }
+}
+
+.bg-align-top-left {
+  background-position: top left !important;
+}
+
+.bg-align-top-center {
+  background-position: top center !important;
+}
+
+.bg-align-top-right {
+  background-position: top right !important;
+}
+
+.bg-align-center-left {
+  background-position: center left !important;
+}
+
+.bg-align-center-center {
+  background-position: center center !important;
+}
+
+.bg-align-center-right {
+  background-position: center right !important;
+}
+
+.bg-align-bottom-left {
+  background-position: bottom left !important;
+}
+
+.bg-align-bottom-center {
+  background-position: bottom center !important;
+}
+
+.bg-align-bottom-right {
+  background-position: bottom right !important;
+}
+
+/* text-alignment */
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right; 
+  margin-left: auto;
+}
+
+.align-center {
+  text-align: center;
+  
+  .text-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.legal {
+  padding: $colPadding;
+  max-height: 150px;
+  @extend .tiny-text;
+  @extend .text-container;
+  max-width: 100%;
+  overflow-y: auto;
+}
+
+
+
+

@@ -1,0 +1,50 @@
+footer.page-footer {
+  //background-image: url('../img/footer-hills.jpg');
+  @include fullBg;
+  background-position: top center; 
+  position: relative;
+  line-height: 1.5;
+  
+  label {
+    display: none;
+  }
+  
+  input {
+    display: inline-block;
+    font-size: 1rem;
+    background: $white;
+    padding: 5px;
+    display: none;
+  }
+  
+  .closure {
+    padding: 15vw $colPadding 15vw $colPadding;
+    letter-spacing: 8px;
+    line-height: 2;
+    @include titleFont;
+    text-align: center;
+    text-transform: uppercase;
+    @include text-shadow(0 0 6px $white);
+  }
+  
+  .social {
+    a {
+      text-decoration: none;
+      margin-right: 1em;
+    }
+  }
+  
+   
+ .footer-contacts {
+    width: 100%;
+    padding: $colPadding 0;   
+    background: $primaryColor;
+    color: $white;
+  
+  a {
+    color: $white;
+    padding-right: 0.5em;
+  }
+ }
+  
+}

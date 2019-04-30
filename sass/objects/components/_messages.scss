@@ -1,0 +1,55 @@
+.messages {
+  position: relative;
+  padding: $colPadding;
+  @include border-radius($formRadius);
+  background: $fillColor;
+  margin-bottom: $colPadding;
+  
+  h2 {
+    margin-bottom: $colPadding;
+    font-size: $bigFontSize;
+    text-transform: uppercase;
+  }
+  
+  &.error {
+    color: $errorColor;  
+  }
+  
+  .info {
+    color: $black;
+  }
+  
+  em {
+    @include copyFontBold;
+  }
+  
+  ul {
+    padding-left: 1em;
+    line-height: $textLineHeight;
+  }
+  
+  li {
+    list-style-type: decimal;
+    padding-left: 1em;
+    padding-bottom: 0.5em;
+  }
+  
+  
+  
+  &:after {
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    margin-left: -20px;
+    @include triangle(bottom,$fillColor,20px);
+  }
+  
+  &.modal {
+    background: none;
+    
+    &:after {
+      display: none;
+    }
+  }
+  
+}

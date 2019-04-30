@@ -1,0 +1,30 @@
+/* hero section */
+.hero {
+  
+  position: relative;
+  min-height: 25vw;
+  
+  .content {
+    @include container();
+    @extend .with-content;  
+    padding: $colPadding; 
+  }
+  
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  figure {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+}

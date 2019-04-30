@@ -1,0 +1,187 @@
+@charset "utf-8";
+
+.huge-text {
+  font-size: $hugeFontSize;
+}
+
+.big-text {
+  font-size: $bigFontSize;
+}
+
+.small-text {
+  font-size: $smallFontSize;
+}
+
+.tiny-text {
+  font-size: $tinyFontSize;
+}
+
+.normal-text {
+  font-size: $normalFontSize;
+}
+
+.hero-text {
+  font-size: $heroFontSize;
+}
+
+/* text-container */
+
+.text-container {
+  max-width: $maxLineLength;
+  @include copyFont; 
+  @include clearfix;
+  
+  line-height: $textLineHeight;
+  
+  a {
+    color: $linkColor;
+  }
+  
+  blockquote {
+    display: block;
+    position: relative;
+    padding-left: 3em;
+    
+    &:after {
+      content: "“";
+      position: absolute;
+      display: block;
+      line-height: 1;
+      top: -16px;
+      left: 0;
+      font-size: 8em;
+      
+    }
+  }
+
+  h1 {
+    @include titleFont; 
+    font-size: 3rem;
+    padding-bottom: 0.5em; 
+  }
+
+  /*
+   * headings
+   */
+  h2 {
+    font-size: 2em;
+    @include copyFontBold;
+    @include titleFont;
+    //text-transform: uppercase;
+  }
+  
+  h3 {
+    font-size: 1.5em;
+    @include copyFontBold;
+    @include titleFont;
+    text-transform: uppercase;}
+    h4 {
+    @include copyFontBold;
+  }
+  
+  h2,h3,h4 {
+    line-height: $titleLineHeight;
+    margin-bottom: 0.5em;
+  }
+  
+  h2 {
+    margin-top: 1em;
+    
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  
+  *.sticker {
+    margin-bottom: 0; 
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  em {
+    @include copyFontItalic;   
+  }
+  
+  strong {
+    @include copyFontBold;
+  }
+    
+  ul,ol,dl {
+    margin-bottom: 0.5em;
+  }
+    
+  li, dt {
+    display: block;
+    margin-bottom: 0.5em;
+    padding-left: 1em;
+    position: relative;
+    
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: "–";
+    }
+  }
+  
+  dd {
+    padding-left: 1em;
+    margin-bottom: 0.5em;
+  }
+
+  .no-bullets {
+    
+    li, dt, dd {
+      padding-left: 0;
+      &:before {
+        content: "";
+      }
+    }
+    
+  }
+
+  &.last {
+    
+    *:last-child {
+      margin-bottom: 0;
+    }
+    
+  }
+  
+  &.align-center {
+    margin: 0 auto;
+  }
+
+}
+
+/* hanging quotes */
+
+@mixin hangingQuotes {
+    &:before,
+    &:after {
+      font-size: 180px;
+      z-index: 50;
+      @include copyFont;
+    } 
+    
+    &:before {
+      position: absolute;
+      content: "“";
+      left: 0px;
+      top: -70px;
+
+    }
+  
+    &:after {
+      position: absolute;
+      content: "”";
+      bottom: -100px;
+      right: 0;
+    }
+}
+
+.hangingQuotes {
+  @include hangingQuotes;
+}

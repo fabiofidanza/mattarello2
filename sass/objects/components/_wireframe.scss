@@ -1,0 +1,28 @@
+.wireframe-box {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute; 
+    z-index: 8000;
+    top: 0; 
+    bottom: 0; 
+    right: 0; 
+    left: 0;
+    background: url(../img/wireframe.svg), rgba($wireframeGrey,0.3) no-repeat;
+    background-size: 100%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;  
+    border: 2px solid $wireframeGrey;  
+  }
+  .content {
+      z-index: 9000;
+      position: relative;
+  }
+  &.light:before {
+    background: url(../img/wireframe.svg), rgba($wireframeGrey,0.2) no-repeat;
+  }
+  &.dark:before {
+    background: url(../img/wireframe.svg), rgba($wireframeGrey,0.5) no-repeat;
+  }
+}

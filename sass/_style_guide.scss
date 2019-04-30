@@ -1,0 +1,49 @@
+.top-nav-bar {
+  
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.4);
+
+  h1 {
+  font-size: 1.2rem;
+  padding-bottom: 0;
+  vertical-align: middle;
+  display: table-cell;
+  color: #3f5f98;
+  text-indent: 0;
+  }
+  
+  li a {
+    color: #3f5f98;
+  }
+}
+
+/*.main-content-wrapper {
+  padding-top: 70px;
+}*/
+
+.source-code {
+  
+  code {
+    display: block;
+    font-size: 0.75rem;
+    color: $black;
+  }
+  
+  padding: $colPadding;
+  border: 1px dashed $fillColor;
+  @include border-radius(10px);
+  
+  margin: $colPadding 0;
+  
+}    
+
+.show-source {
+  font-size: $smallFontSize;
+
+
+// per evitare che certi elementi appaiano quando vengono citati dentro show-source
+  &.no-preview {
+    .button, .top-nav-bar, .col-3, .full-menu {
+      display: none;
+    }
+  }
+}

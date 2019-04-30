@@ -1,0 +1,29 @@
+// children menu //
+
+.children-menu {
+  margin-top: 0.5rem; 
+  li {
+    display: inline-block;
+    margin-bottom: auto;
+    padding-left: 0;
+    
+    &:before {
+      content: none; // sovrascrive text-container li:before che crea delle linee
+    }
+  
+    a {
+      color: $primaryColor;
+      text-decoration: none;
+      user-select: none;
+      cursor: pointer;
+      font-size: $smallFontSize;
+      border: 2px solid $primaryColor;
+      padding: 3px 10px;
+      
+      .negative & {
+        border: 2px solid $white;
+        color: $white;
+      }
+    }
+  }
+}

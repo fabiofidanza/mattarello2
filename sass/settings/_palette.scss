@@ -1,0 +1,61 @@
+// SASS style sheet */
+
+// As hex codes */
+$white: #FFFFFF;
+$black: #000000;
+
+$textColor: #444;
+$subtleColor: #AAA;
+
+$linkColor: #44F;
+
+$primaryColor: #bd473e;
+
+$errorColor: #900;
+
+$bodyBgColor: $white;
+
+/*
+ * colors
+ */
+
+$transWhite: transparentize($white,.5);
+$transGrey: transparentize($subtleColor,.5);
+$transBlack: transparentize($black,.5);
+
+/* overlays */
+
+$imageOverlay: transparentize($white,.2);
+$popupOverlay: transparentize($white,.1);
+
+/* borders */
+$borderColor: 2px solid $black; 
+$lightBorder: 2px solid $subtleColor; 
+
+
+/* forms */
+
+$placeholderColor: $subtleColor;
+$labelColor: $primaryColor;
+$iconColor: $textColor; 
+$formFieldBorder: 1px dotted $black;
+$formErrorColor: $errorColor;
+$disabledInput: #EAE8DB;
+
+
+/* block backgrounds */
+
+$fillColor: $primaryColor;
+$fillLight: $subtleColor;
+
+/* wireframe */
+
+$wireframeGrey: #808080;
+
+
+/* shadows */
+$shadowColor: transparentize($black,.8);
+
+/* Hamburger Menu */
+
+$hamburgerColor: #3f5f98;

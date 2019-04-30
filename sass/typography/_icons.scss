@@ -1,0 +1,28 @@
+@mixin iconFont {
+  font-family: 'icomoon'; 
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconFont {
+  @include iconFont;
+} 
+
+/* sizes */
+
+$bigIconSize: 64px;
+$hugeIconSize: 128px;
+
+/* example of glyph */
+.iconArrowRight {
+  @include iconFont;
+  content: "\eddb";
+}

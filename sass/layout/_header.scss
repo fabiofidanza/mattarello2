@@ -1,0 +1,90 @@
+$headerHeight: auto;
+
+.top-nav-bar {
+	height: $headerHeight;
+	background: transparentize($white,0);
+	z-index: 400;
+	overflow: visible;
+	
+	nav {
+	  display: block;
+	}
+	
+	li a {
+	  display: block;
+	  width: 100%;
+	}
+
+	 
+	h1 {
+	  @include hide-text;
+	  display: block;
+	  position: relative;
+	  
+	  a {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	  }
+	  
+	  background: url('../img/the-chitarra-copia.png');
+	  background-position: 50% 50%;
+	  background-repeat: no-repeat;
+	  background-size: contain;
+	  height: $logoHeight;
+	}
+	
+	ul {
+	  text-align: right;
+	}
+	
+	li {
+	  display: inline-block;
+	  line-height: $headerHeight;
+    @include titleFont;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    
+      a {
+        text-decoration: none;
+        display: inline-block;
+        color: $primaryColor;
+        font-size: $normalFontSize;
+       
+        line-height: 1.5;
+        
+        &.active {
+    
+          border-bottom: 2px solid $primaryColor;
+        }
+      }
+	}
+	
+	// secondary menu //
+
+  .secondary-menu li a {
+    font-size: $smallFontSize;
+    font-weight: normal; 
+  }
+
+	
+}
+	
+// fixed header //
+
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+}
+
+
+
+
+
+
+

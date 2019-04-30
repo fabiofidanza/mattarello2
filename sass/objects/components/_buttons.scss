@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+
+.action {
+  @include copyFont;  
+
+  text-align: center;
+  background: $primaryColor; 
+  padding: $colPadding / 2;
+  color: $white;
+  font-size: 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+  position: relative;
+  
+  &:hover {
+    background: lighten($primaryColor, 10); 
+  }
+  
+  @include transition(all 0.2s ease);
+
+  & + .action{
+    margin-left: $colPadding;
+  } 
+
+  @include interfaceAnchor;
+
+  font-style: normal;
+
+  @include border-radius($filledAreaRadius);
+
+  /*
+   * 
+  border: 2px solid $red;
+  background: $white !important;
+  color: $red !important;
+  
+   */
+
+  &.tiny {
+    font-size: $tinyFontSize;
+    color: $white;
+    letter-spacing: 0;
+  }   
+  
+  &.big {
+    font-size: $bigFontSize;
+    color: $white;
+    padding: $colPadding;
+  }  
+  
+  &.light {
+    background: transparent;
+    color: $primaryColor;
+    border: 1px solid $primaryColor;
+    top: 0;
+    
+    &:hover {
+      color: $white; 
+      background: $primaryColor;
+    }
+    
+    @include box-shadow(none); 
+  }
+
+  em {
+    display: block;
+    font-weight: 700;
+  }
+}
+
+.secondary-action {
+  display: inline-block;
+  margin-top: $colPadding;
+  color: $primaryColor;
+  text-decoration: none;  
+  border-bottom: 1px dotted $primaryColor;
+}

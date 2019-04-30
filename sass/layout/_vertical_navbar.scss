@@ -1,0 +1,113 @@
+.vertical-navbar {
+  position: fixed;
+  left: 0;
+  top: 45%;
+  z-index: 9999;
+  
+  .touch & {
+    display: none;
+  }
+  
+  ul, li {
+    list-style: none;
+  }
+  
+  li {
+    padding: 0 0 0 25px;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    display: block;
+    @include interfaceAnchor;
+    @include clearfix;
+    
+    &:before {
+      position: absolute;
+      top: 50%;
+      @include transform(translateY(-50%));
+      left: 4px;
+      content: "";
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      background: rgba(255,255,255,0.9);
+      border: 2px solid $primaryColor;
+      @include border-radius(50%);
+      @include transition(background 0.2s ease);
+    }
+    
+          
+    &:hover:before, &.active:before {
+      background: $primaryColor;
+    }
+    
+    &.active {
+      span {
+        background: $primaryColor;
+        color: $white;
+        @include transition(background 0.2s ease, color 0.2s ease);
+      }
+    }
+    
+    span {
+      float: left;
+      white-space: nowrap;
+      @include titleFont;
+      color: $primaryColor; 
+      font-size: 14px;
+      line-height: 25px;
+      margin-top: 2px;
+      text-transform: uppercase;
+      display: none;
+      padding: 0 6px;
+      background: rgba(255,255,255,0.95);
+      border: 1px solid transparentize($primaryColor,0.8);
+      @include border-radius(3px);
+
+    }
+    
+  }
+  
+  &.hover {
+    
+  //  padding: 20px 20px 20px 0;
+         
+    li {
+
+      span {
+        display: block;
+      }
+    }
+    
+    
+    /*
+    & + .body-wrapper {
+    
+      @include opacity(0.2);
+      
+    }
+    */
+    
+  }
+  
+  .scroll-top {
+    padding-left: 4px;
+    padding-bottom: 6px;
+    padding-top: 20px;
+    @include interfaceAnchor;
+    display: block;
+    
+    &:before {
+      display: block;
+      font-size: 12px;
+      @include triangle(top,$primaryColor,7px);  
+      color: $primaryColor;
+
+    }
+  }
+  
+}
+
+.body-wrapper {
+  @include transition(opacity 0.2s linear);
+}

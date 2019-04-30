@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:400,400i,700,700i');
+
+/* font families */
+$copyFamily: "Roboto", sans-serif; 
+$copyWeight: normal;
+
+$copyLightWeight: 300;
+
+$copyItalicFamily: $copyFamily;
+$copyItalicStyle: italic;
+$copyItalicWeight: normal;
+
+$copyBoldItalicFamily: $copyFamily;
+$copyBoldItalicStyle: italic;
+$copyBoldItalicWeight: 700;
+
+$copyBoldFamily: $copyFamily;
+$copyBoldStyle: normal;
+$copyBoldWeight: 700;
+
+$titleFamily: 'Roboto Condensed', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$titleWeight: 700;
+
+
+@mixin titleFont {
+  font-family: $titleFamily;
+  font-weight: $titleWeight;
+}
+
+@mixin copyFont {
+  font-family: $copyFamily;
+  font-weight: $copyWeight;
+}     
+
+@mixin copyFontItalic {
+  font-family: $copyItalicFamily;
+  font-style: $copyItalicStyle;
+  font-weight: $copyItalicWeight;
+}
+
+@mixin copyFontLight {
+  font-family: $copyFamily;
+  font-weight: $copyLightWeight;
+}
+
+@mixin copyFontBold {
+  font-family: $copyBoldFamily;
+  font-style: $copyBoldStyle;
+  font-weight: $copyBoldWeight;
+}
+
+@mixin copyFontBoldItalic {
+  font-family: $copyBoldItalicFamily;
+  font-style: $copyBoldItalicStyle;
+  font-weight: $copyBoldItalicWeight;
+}

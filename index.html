@@ -1,0 +1,1372 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mattarello</title>
+    <link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+    <script src="js/style_guide.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+  	
+	<header class="top-nav-bar sticky-header page-header">
+		
+		<div class="container v-padded-half">
+			<div class="row">
+				<div class="col-3 logo-container">
+					<h1>Mattarello 1.0</h1>
+          <div class="hamburger mobile-menu-trigger">
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+              <path d="m491.32 235.32h-470.64c-11.422 0-20.682 9.259-20.682 20.682s9.26 20.682 20.682 20.682h470.64c11.423 0 20.682-9.259 20.682-20.682 0-11.422-9.259-20.682-20.682-20.682z" />
+              <path d="m491.32 78.439h-470.64c-11.422 0-20.682 9.26-20.682 20.682s9.26 20.682 20.682 20.682h470.64c11.423 0 20.682-9.26 20.682-20.682s-9.259-20.682-20.682-20.682z" />
+              <path d="m491.32 392.2h-470.64c-11.422 0-20.682 9.259-20.682 20.682s9.26 20.682 20.682 20.682h470.64c11.423 0 20.682-9.259 20.682-20.682s-9.259-20.682-20.682-20.682z" />
+            </svg>
+            <div class="svg-close">
+              <?xml version="1.0" encoding="UTF-8"?>
+              <svg enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                <path d="m505.94 6.058c-8.077-8.077-21.172-8.077-29.249 0l-470.64 470.64c-8.077 8.077-8.077 21.172 0 29.249 4.038 4.04 9.332 6.058 14.625 6.058s10.586-2.019 14.625-6.059l470.64-470.64c8.076-8.076 8.076-21.171 0-29.248z" />
+                <path d="m505.94 476.69l-470.64-470.64c-8.076-8.077-21.172-8.077-29.248 0-8.077 8.076-8.077 21.171 0 29.248l470.64 470.64c4.038 4.039 9.332 6.058 14.625 6.058s10.587-2.019 14.624-6.057c8.075-8.078 8.075-21.173-1e-3 -29.25z" />
+              </svg>
+            </div>
+          </div>
+				</div>
+				<div class="col-9 full-menu">					
+					<nav class="secondary-menu">
+						<ul>
+							<li><a href="">Un menu</a></li>
+							<li><a href="">Secondario</a></li>
+							<li><a href="">Di prova</a></li>
+						</ul>
+					</nav>
+					<nav class="primary-menu">
+						<ul>
+							<li><a href="">Questo invece</a></li>
+							<li><a href="">Un menu</a></li>
+							<li><a href="">Primario</a></li>
+							<li><a href="">Di prova</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			
+		</div>
+	</header>
+
+    <div class="main-content-wrapper">
+    	
+	<!-- Esempio di Breadcrumb + Child Menu -->
+    	
+    <div class="page-title-wrapper negative">
+    	<div class="container with-content text-container"> 
+    		<nav role="navigation">
+    			<ul class="breadcrumbs">
+    				<li><a href="">Home</a></li>
+    				<li><a href="">Pagina padre</a></li>
+				</ul> 
+			</nav>
+			<h1>Titolo pagina</h1>
+			<nav role="navigation">
+    			<ul class="children-menu">
+    				<li><a href="">Pagina figlia 1</a></li>
+    				<li><a href="">Pagina figlia 2</a></li>
+    				<li><a href="">Pagina figlia 3</a></li>
+				</ul> 
+			</nav>
+		</div>
+	</div>	
+    	
+    <!-- Inizio Griglia -->
+    	
+      <div class="container with-content text-container v-padded">
+        <h2>The Grid</h2>
+        <h3 class="hanging h2-number-0" data-h2-id="h2-number-0">Griglia orizzontale</h3>
+        <p>
+          Il sito è costruito su una griglia di 12 colonne orizzontali.
+          <br>
+          Gli elementi possono occupare qualunque numero di colonne.
+        </p>
+        <p>
+          Le colonne sono elementi con classe
+          <code>col-X</code>
+          , con X da 1 a 12.
+          <br>
+          Le colonne vanno incluse in una riga con classe
+          <code>row.</code>
+        </p>
+        <p>
+          Per racchiudere un elemento o una riga di colonne entro la larghezza standard di una pagina, racchiudere gli stessi dentro un elemento con classe
+          <code>container</code>
+        </p>
+      </div>
+      <div class="show-source">
+        <div class="container">
+          <div class="row align-center v-padded-half">
+            <div class="col-1">
+              <div class="filled v-padded ">
+                .col-1
+              </div>
+            </div>
+            <div class="col-1">
+              <div class="filled v-padded ">
+                .col-1
+              </div>
+            </div>
+            <div class="col-1">
+              <div class="filled v-padded ">
+                .col-1
+              </div>
+            </div>
+            <div class="col-1">
+              <div class="filled v-padded ">
+                .col-1
+              </div>
+            </div>
+            <div class="col-1">
+              <div class="filled v-padded ">
+                .col-1
+              </div>
+            </div>
+            <div class="col-1">
+              <div class="filled v-padded ">
+                .col-1
+              </div>
+            </div>
+            <div class="col-1">
+              <div class="filled v-padded ">
+                .col-1
+              </div>
+            </div>
+            <div class="col-1">
+              <div class="filled v-padded ">
+                .col-1
+              </div>
+            </div>
+            <div class="col-1">
+              <div class="filled v-padded ">
+                .col-1
+              </div>
+            </div>
+            <div class="col-1">
+              <div class="filled v-padded ">
+                .col-1
+              </div>
+            </div>
+            <div class="col-1">
+              <div class="filled v-padded ">
+                .col-1
+              </div>
+            </div>
+            <div class="col-1">
+              <div class="filled v-padded ">
+                .col-1
+              </div>
+            </div>
+          </div>
+          <div class="row align-center v-padded-half">
+            <div class="col-1">
+              <div class="filled v-padded ">
+                .col-1
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="filled v-padded ">
+                .col-2
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="filled v-padded ">
+                .col-3
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="filled v-padded ">
+                .col-6
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="container with-content text-container v-padded">
+        <h3 class="hanging h2-number-1" data-h2-id="h2-number-1">Griglie innestate</h3>
+        <p>
+          È possibile innestare griglie a qualunque livello
+        </p>
+      </div>
+      <div class="show-source">
+        <div class="container v-padded-half">
+          <div class="row align-center">
+            <div class="col-4">
+              <div class="filled v-padded">
+                <div class="v-padded">
+                  .col-4
+                </div>
+                <div class="row">
+                  <div class="col-4">
+                    <div class="filled">
+                      .col-4
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="filled">
+                      .col-4
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="filled">
+                      .col-4
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="filled v-padded">
+                .col-4
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="filled v-padded">
+                .col-4
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="container with-content text-container v-padded">
+        <h3 class="hanging h2-number-2" data-h2-id="h2-number-2">Elementi larghi 12 colonne</h3>
+        <p>
+          Per evitare di utilizzare un <code>container</code>, una <code>row</code> ed un elemento <code>col-12</code> è possibile utilizzare un elemento con entrambe le classi <code>container</code>
+          e <code>with-content</code>
+        </p>
+      </div>
+      <div class="show-source">
+        <div class="container v-padded-half">
+          <div class="row">
+            <div class="col-12">
+              <div class="padded filled">
+                .col-12 dentro .container e .row
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container with-content v-padded-half">
+          <div class="padded filled">
+            elemento dentro .container.with-content
+          </div>
+        </div>
+      </div>
+      <div class="container with-content text-container v-padded">
+        <h3 class="hanging h2-number-3" data-h2-id="h2-number-3">Colonne senza spaziatura</h3>
+        <p>
+          Il sistema grafico è costruito su una unità di spaziatura che viene utilizzata per margini interni ed esterni e per la spaziatura delle colonne.
+        </p>
+        <p>
+          A volte è necessario utilizzare griglie in cui le colonne risultano adiacenti, senza spazio interno.
+          <br>
+          Per questo assegnamo la classe <code>collapse</code> all'elemento <code>row</code>
+        </p>
+      </div>
+      <div class="show-source">
+        <div class="container">
+          <div class="row collapse">
+            <div class="col-6 filled">
+              <div class="padded">
+                .col-6
+              </div>
+            </div>
+            <div class="col-6 filled" style="background: #009ca6">
+              <div class="padded">
+                .col-3
+              </div>
+            </div>
+            <div class="col-3 filled">
+              <div class="padded">
+                .col-3
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container with-content text-container v-padded">
+        <h3 class="hanging h2-number-4" data-h2-id="h2-number-4">Allineamento verticale</h3>
+        <p>
+          Per default le colonne di una riga sono allineate verticalmente in alto.
+        </p>
+        <p>
+          È possibile allineare il contenuto delle colonne <em>in basso</em> utilizzando sull'elemento <code>.row</code> la classe <code>vbottom</code>
+        </p>
+        <div class="show-source">
+          <div class="row vbottom">
+            <div class="col-4">
+              <div class="padded filled">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum architecto delectus repudiandae provident modi quia! Nesciunt harum amet optio repellendus.
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="padded filled">
+                Ciao
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="padded filled">
+                Lorem ipsum dolor.
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>
+          È possibile allineare il contenuto delle colonne <em>al centro</em> utilizzando sull'elemento
+          <code>.row</code> la classe <code>vcenter</code>
+        </p>
+        <div class="show-source">
+          <div class="row vcenter">
+            <div class="col-4">
+              <div class="padded filled">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum architecto delectus repudiandae provident modi quia! Nesciunt harum amet optio repellendus.
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="padded filled">
+                Ciao
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="padded filled">
+                Lorem ipsum dolor.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container with-content text-container v-padded">
+        <h3 class="hanging h2-number-5" data-h2-id="h2-number-5">Griglie di oggetti</h3>
+        <p>
+          In alcuni casi è necessario presentare un numero arbitrario di elementi, con una struttura a griglia, senza conoscere a priori il numero di righe, ad esempio nel caso di una galleria di immagini.
+        </p>
+        <p>
+          A questo scopo utilizziamo una <code>ul</code> con classe <code>n-up</code> e <code>up-X</code>, dove X è il numero di elementi per riga.
+        </p>
+      </div>
+      <div class="show-source">
+        <div class="container align-center">
+          <ul class="4-up n-up ">
+            <li>
+              <div class="filled padded">
+                elemento
+              </div>
+            </li>
+            <li>
+              <div class="filled padded">
+                elemento
+              </div>
+            </li>
+            <li>
+              <div class="filled padded">
+                elemento
+              </div>
+            </li>
+            <li>
+              <div class="filled padded">
+                elemento
+              </div>
+            </li>
+            <li>
+              <div class="filled padded">
+                elemento
+              </div>
+            </li>
+            <li>
+              <div class="filled padded">
+                elemento
+              </div>
+            </li>
+            <li>
+              <div class="filled padded">
+                elemento
+              </div>
+            </li>
+            <li>
+              <div class="filled padded">
+                elemento
+              </div>
+            </li>
+            <li>
+              <div class="filled padded">
+                elemento
+              </div>
+            </li>
+            <li>
+              <div class="filled padded">
+                elemento
+              </div>
+            </li>
+            <li>
+              <div class="filled padded">
+                elemento
+              </div>
+            </li>
+            <li>
+              <div class="filled padded">
+                elemento
+              </div>
+            </li>
+            <li>
+              <div class="filled padded">
+                elemento
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container with-content text-container v-padded">
+        <h3 class="hanging h2-number-6" data-h2-id="h2-number-6">Griglia su display ridotti</h3>
+        <p>
+          La griglia è costruita per essere linearizzata in verticale al di sotto di un singolo breakpoint.
+        </p>
+        <p>
+          Per default gli elementi <code>.col-X</code> vengono impilati in verticale ed occupano tutta la larghezza del loro elemento padre.
+        </p>
+      </div>
+      <div class="show-source">
+        <div class="container">
+          <div class="row">
+            <div class="col-4">
+              <div class="padded filled">
+                .col-4
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="padded filled">
+                .col-4
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="padded filled">
+                .col-4
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container with-content text-container v-padded">
+        <p>
+          È tuttavia possibile forzare un comportamento diverso utilizzando le classi <code>mob-X</code>, che si comportano come <code>col-X</code>, ma soltanto al di sotto del breakpoint.
+        </p>
+      </div>
+      <div class="show-source">
+        <div class="container align-center">
+          <div class="row">
+            <div class="col-4 mob-6">
+              <div class="filled v-padded">
+                .col-4 <em>.mob-6</em>
+              </div>
+            </div>
+            <div class="col-4 mob-3">
+              <div class="filled v-padded">
+                .col-4 <em>.mob-3</em>
+              </div>
+            </div>
+            <div class="col-4 mob-3">
+              <div class="filled v-padded">
+                .col-4 <em>.mob-3</em>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container with-content text-container v-padded">
+        <h3 class="hanging h2-number-7" data-h2-id="h2-number-7">Push e pull</h3>
+        <p>
+          A volte è necessario presentare gli elementi della griglia secondo un ordine orizzontale diverso rispetto al markup (ad. esempio per ragioni di indicizzazione o priorità dei contenuti su display ridotti).
+        </p>
+        <p>
+          <em>È importante compensare gli elementi che utilizzano le classi push e pull, per evitare sovrapposizioni.</em>
+        </p>
+        <p>
+          La classe <code>push-X</code> sposta un'elemento a destra di X colonne,
+          <br>
+          La classe <code>pull-X</code> sposta un'elemento a sinistra di X colonne.
+        </p>
+      </div>
+      <div class="show-source">
+        <div class="container">
+          <div class="row">
+            <div class="col-6 push-6">
+              <div class="filled padded">
+                Primo elemento nel markup
+              </div>
+            </div>
+            <div class="col-6 pull-6">
+              <div class="filled padded">
+                Secondo elemento nel markup
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    <!-- Fine Griglia -->
+	
+	<!-- Inizio Stile dei blocchi -->
+	
+      <div class="container with-content text-container v-padded">
+        <h2>Stile dei blocchi</h2>
+        <h3 class="hanging h2-number-0" data-h2-id="h2-number-0">Larghezza di blocchi</h3>
+        <p>
+          Il contenuto delle pagine del sito è mantenuto all'interno di una larghezza coerente attraverso l'utilizzo della griglia (vedi sezione apposita).
+        </p>
+        <p>
+          Qualora un elemento debba occupare tutta la larghezza della finestra sarà sufficiente non utilizzare nessuna classe.
+        </p>
+      </div>
+      <div class="show-source">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="filled padded">
+                Elemento su 12 colonne (.col-12)
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="v-padded">
+          <div class="filled padded">
+            elemento a larghezza piena
+          </div>
+        </div>
+      </div>
+      
+      <div class="container with-content text-container v-padded">
+        <h3 class="hanging h2-number-3" data-h2-id="h2-number-3">Spaziatura interna</h3>
+        <p>
+          È possibile applicare spaziatura interna su tutti i lati, solo in orizzontale, solo in verticale, singola, ridotta e doppia, come da esempio (e combinare le varie classi):
+        </p>
+      </div>
+      <div class="show-source">
+        <div class="container">
+          <ul class="n-up up-3 ">
+            <li>
+              <div class="filled padded">
+                .padded
+              </div>
+            </li>
+                        <li>
+              <div class="filled padded-half">
+                .padded-half
+              </div>
+            </li>
+                        <li>
+              <div class="filled padded-double">
+                .padded-double
+              </div>
+            </li>
+            <li>
+              <div class="filled v-padded">
+                .v-padded
+              </div>
+            </li>
+                      <li>
+              <div class="filled v-padded-half">
+                .v-padded-half
+              </div>
+            </li>
+                      <li>
+              <div class="filled v-padded-double">
+                .v-padded-double
+              </div>
+            </li>
+            <li>
+              <div class="filled h-padded">
+                .h-padded
+              </div>
+            </li>
+
+  
+            <li>
+              <div class="filled h-padded-half">
+                .h-padded-half
+              </div>
+            </li>
+                     <li>
+              <div class="filled h-padded-double">
+                .h-padded-double
+              </div>
+            </li>
+
+            <li>
+              <div class="filled v-padded-top">
+                .v-padded-top
+              </div>
+            </li>
+            <li>
+              <div class="filled v-padded-bottom">
+                .v-padded-bottom
+              </div>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <div class="container with-content text-container v-padded">
+        <p>
+          È possibile, tuttavia, utilizzare blocchi di larghezza ridotta, rispettivamente al 75% della larghezza standard o al 50%.
+        </p>
+      </div>
+      <div class="show-source">
+        <div class="container width-75 v-padded-half">
+          <div class="filled padded">
+            .width-75
+          </div>
+        </div>
+        <div class="container width-50">
+          <div class="filled padded">
+            .width-50
+          </div>
+        </div>
+      </div>
+      <div class="container with-content text-container v-padded">
+        <h3 class="hanging h2-number-1" data-h2-id="h2-number-1">Sfondo colorato</h3>
+        <p>
+          È possibile applicare a un blocco uno sfondo leggero applicando la classe <code>filled</code>
+        </p>
+        <p>
+          Un elemento <code>filled</code> dentro un elemento <code>filled</code> avrà colore bianco
+        </p>
+
+      </div>
+      <div class="show-source">
+        <div class="container with-content v-padded-half">
+          <div class="filled padded">
+            .filled
+          </div>
+        </div>
+        <div class="container with-content v-padded-half">
+          <div class="filled padded">
+            <div class="filled padded">
+              .filled dentro .filled
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container with-content text-container v-padded">
+        <h3 class="hanging h2-number-2" data-h2-id="h2-number-2">Sfondo con immagini</h3>
+        <p>
+          Per riempire un elemento con un immagine di sfondo, coprendone l'intera superficie è possibile applicare la classe <code>full-bg</code>, oltre a specificare il <code>background-image</code> tramite CSS esterno o attributo <code>style</code>
+        </p>
+                <p>
+          Quando si utilizza un testo all'interno del blocco, è possibile aggiungere
+          un overlay bianco o nero per aumentare la leggibilità, utilizzando le classi
+          <code>with-white-overlay</code> e <code>with-black-overlay</code>,
+          inserendo il contenuto testuale all'interno di un elemento con classe
+          <code>content</code> (per gestire lo stacking rispetto all'overlay)
+        </p>
+      </div>
+      <div class="show-source">
+        <div class="container with-content v-padded-half">
+          <div class="full-bg padded" style="background-image: url(img/pasta.jpg)">
+            Questo elemento ha classe full-bg.
+            <br>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus labore aperiam cupiditate quos id corporis quas ratione porro nam ab odit voluptatum laudantium. Iusto minus neque ipsam consequatur cupiditate at quas a autem necessitatibus suscipit. Cumque ipsa hic laborum ullam.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas nulla minima sit eum obcaecati. Nemo beatae fugit amet facilis dolores.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="show-source">
+        <div class="container with-content v-padded-half">
+          <div class="full-bg padded with-white-overlay" style="background-image: url(img/pasta.jpg)">
+           <div class="content">
+            	 Questo elemento ha classe full-bg.
+            	<br>
+            	<p>
+            	  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus labore aperiam cupiditate quos id corporis quas ratione porro nam ab odit voluptatum laudantium. Iusto minus neque ipsam consequatur cupiditate at quas a autem necessitatibus suscipit. Cumque ipsa hic laborum ullam.
+            	</p>
+            	<p>
+            	  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas nulla minima sit eum obcaecati. Nemo beatae fugit amet facilis dolores.
+            	</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="show-source">
+        <div class="container with-content v-padded-half">
+          <div class="full-bg padded with-black-overlay" style="background-image: url(img/pasta.jpg)">
+           <div class="content" style="color: #fff">
+            	 Questo elemento ha classe full-bg.
+            	<br>
+            	<p>
+            	  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus labore aperiam cupiditate quos id corporis quas ratione porro nam ab odit voluptatum laudantium. Iusto minus neque ipsam consequatur cupiditate at quas a autem necessitatibus suscipit. Cumque ipsa hic laborum ullam.
+            	</p>
+            	<p>
+            	  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas nulla minima sit eum obcaecati. Nemo beatae fugit amet facilis dolores.
+            	</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container with-content text-container v-padded">
+        <p>
+          È possibile controllare l'allineamento dello sfondo in 9 posizioni attraverso le classi:
+        </p>
+        <ul>
+          <li>
+			<code>bg-align-top-left</code>
+          </li>
+          <li>
+			<code>bg-align-top-center</code>
+          </li>
+          <li>
+			<code>bg-align-top-right</code>
+          </li>
+          <li>
+			<code>bg-align-center-left</code>
+          </li>
+          <li>
+			<code>bg-align-center-center</code>
+          </li>
+          <li>
+			<code>bg-align-center-right</code>
+          </li>
+          <li>
+			<code>bg-align-bottom-left</code>
+          </li>
+          <li>
+			<code>bg-align-bottom-center</code>
+          </li>
+          <li>
+			<code>bg-align-bottom-right</code>
+          </li>
+        </ul>
+        <p>
+          ad esempio:
+        </p>
+      </div>
+      <div class="show-source">
+        <div class="container with-content v-padded-half">
+          <ul class="n-up up 3 ">
+            <li>
+              <div class="full-bg padded bg-align-top-center" style="background-image: url(img/pasta.jpg)">
+                bg-align-top-center
+              </div>
+            </li>
+            <li>
+              <div class="full-bg padded bg-align-center-center" style="background-image: url(img/pasta.jpg)">
+                bg-align-center-center
+              </div>
+            </li>
+            <li>
+              <div class="full-bg padded bg-align-bottom-center" style="background-image: url(img/pasta.jpg)">
+                bg-align-bottom-center
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="container with-content text-container v-padded">
+        <h3 class="hanging">Wireframe</h3>
+        <p>
+          Per aggiungere a qualsiasi div l'effetto wireframe basta applicare la classe <code>wireframe-box</code>
+        </p>
+        <p>
+          Per avere il testo posizionato sopra il wireframe si deve creare un div interno con classe <code>content</code>
+        </p>
+        <p>
+          Per un wireframe più trasparente si aggiunge la classe <code>light</code>
+        </p>
+        <p>
+          Per un wireframe più opaco si aggiunge la classe <code>dark</code>
+        </p>
+      </div>
+      <div class="show-source">
+        <div class="container v-padded-half">
+          <div class="row">
+          	<div class="col-3"><div class="padded filled wireframe-box light"><div class="content">Esempio di contenuto posizionato sopra il wireframe.</div></div></div>
+          	<div class="col-6"><div class="full-bg wireframe-box" style="background-image: url(img/pasta.jpg); height: 400px"></div></div>
+          	<div class="col-3"><div class="padded filled wireframe-box dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis lacinia metus, in iaculis neque hendrerit id. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer dignissim urna vitae mi iaculis ultricies.</div></div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <!-- Fine Stile dei blocchi -->
+      
+      <!-- Inizio Struttura Pagina -->
+      
+      <div class="container with-content text-container v-padded">
+	  	<h2>Page Structure</h2>
+	    <h3 class="hanging">Titoli</h3>
+	    <p>
+	      Il titolo della pagina è contenuto in un <code>h1</code>, stampato dal CMS nella parte alta della pagina.
+	    </p>
+	    <p>
+	      Non bisognerebbe utilizzare altri<code>h1</code> nella pagina.
+	    </p>
+	    <p>
+	      Le sezioni che compongono la pagina vanno racchiuse in un elemento <code>section</code> con classe <code>stripe</code>.
+	    </p>
+	    <p>
+	      Il titolo di ogni sezione è un <code>h3</code>, con classe <code>hanging</code>
+	    </p>
+	    <p>
+	      Il titolo di blocchi all'interno di una <code>section</code> è un <code>h3</code>
+	    </p>
+	  </div>
+	  <div class="show-source">
+	    <div class="container">
+	      <h3 class="hanging">esempio di sezione</h3>
+	      <div class="row">
+	        <div class="col-6">
+	          <h3>Blocco</h3>
+	          <p>
+	            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium ipsum?
+	          </p>
+	        </div>
+	        <div class="col-6">
+	          <h3>Blocco</h3>
+	          <p>
+	            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium ipsum?
+	          </p>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+      
+      <!-- Fine Struttura Pagina -->
+      
+      <!-- Inizio Action Buttons -->
+      
+      <div class="container with-content text-container v-padded">
+	  	<h2>Action Buttons</h2>
+	    <h3 class="hanging">Tipi di pulsanti</h3>
+	    <p>
+	      I pulsanti d'azione sono elementi <code>a</code> con classe <code>action</code>.
+	    </p>
+	    <p>
+	      La resa grafica può essere variata sulla dimensione, applicando le classi <code>tiny</code> o <code>big</code>, e sullo sfondo, applicando la classe <code>light</code> per uno sfondo trasparente.
+	    </p>
+	  </div>
+	  <div class="show-source">
+	    <div class="container align-center">
+	      <ul class="n-up up-3 ">
+	        <li>
+	          <a href="" class="action">azione</a>
+	        </li>
+	        <li>
+	          <a href="" class="action tiny">azione</a>
+	        </li>
+	        <li>
+	          <a href="" class="action big">azione</a>
+	        </li>
+	        <li>
+	          <a href="" class="action light">azione</a>
+	        </li>
+	        <li>
+	          <a href="" class="action light tiny">azione</a>
+	        </li>
+	        <li>
+	          <a href="" class="action light big">azione</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </div>
+      
+      <!-- Fine Action Buttons -->
+      
+      <!-- Inizio Hero -->
+      
+      <div class="container with-content text-container v-padded">
+	  	<h2>Hero</h2>
+	    <h3 class="hanging">Hero a larghezza piena</h3>
+	    <p>
+	      Si estende per la larghezza della pagina.
+	    </p>
+	    <p>
+	      Contiene:
+	    </p>
+	    <ul>
+	      <li>
+	        Una <code>figure</code>, con immagine di background
+	      </li>
+	      <li>
+	        Un elemento con classe <code>content</code>, che racchiude gli elementi testuali
+	      </li>
+	      <li>
+	        Un titolo <code>h2</code>, con ciascuna riga inclusa in uno <code>span</code>
+	      </li>
+	      <li>
+	        Una action opzionale, come elemento <code>a</code> con classe <code>action</code>
+	      </li>
+	    </ul>
+	  </div>
+	  <div class="show-source">
+	    <div class="bg-cover hero">
+	      <figure class="bg-from-image bg-from-image-processed" style="background-image: url(img/pasta.jpg);"><img src="img/pasta.jpg" alt="" style="display: none;">
+	      </figure>
+	      <div class="content">
+	        <h3><span>Lorem ipsum dolor sit amet</span>
+	        <br>
+	        <span>consectetur adipisicing elit</span>
+	        <br>
+	        <span>Laudantium ipsum?</span></h3>
+	        <p>
+	          <a class="action" href="/attiva-ora-sostegno-distanza#form-start">Lorem Ipsum</a>
+	        </p>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="container with-content text-container v-padded">
+	    <h3 class="hanging">Hero a due colonne</h3>
+	    <p>
+	      Presenta l'immagine sulla sinistra e il testo sulla destra.
+	    </p>
+	    <p>
+	      L'altezza dei due blocchi è calcolata in fase di visualizzazione da Javascript, è quindi opportuno utilizzare questo blocco attraverso il tipo di paragraph apposito, anzichè tramite scrittura del codice HTML.
+	    </p>
+	  </div>
+	  <div class="show-source">
+	    <div class="red-bg-left-text-right bg-align-center-left v-padded processed-processed">
+	      <div class="container">
+	        <div class="row">
+	          <div class="col col-6 full-bg" style="background-image: url(img/pasta.jpg);"><img src="img/pasta.jpg" width="600" height="534" alt="" style="display: none;">
+	          </div>
+	          <div class="col col-6">
+	            <div class="fied-body-right text-container">
+	              <div class="text-container big-text">
+	                <h3 class="sticker"><span style="z-index:99680">Sempre e ovunque,</span>
+	                <br>
+	                <span>Lorem ipsum dolor</span></h3>
+	                <p>
+	                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus labore aperiam cupiditate quos id corporis quas ratione porro nam ab odit voluptatum laudantium. 
+	                  <br>
+	                  Iusto minus neque ipsam consequatur cupiditate at quas a autem necessitatibus suscipit. Cumque ipsa hic laborum ullam.
+	                </p>
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+      
+      <!-- Fine Hero -->
+      
+      <!-- Inizio Text Blocks -->
+      
+      <div class="container with-content text-container v-padded">
+	  	<h2>Text Blocks</h2>
+	    <h3 class="hanging h2-number-0" data-h2-id="h2-number-0">Contenitori di testo</h3>
+	    <p>
+	      I brani di testo vanno racchiusi in un elemento con classe <code>text-container</code>.
+	    </p>
+	    <p>
+	      Questo garantisce:
+	    </p>
+	    <ul>
+	      <li>
+	        Corretta lunghezza della linea di testo
+	      </li>
+	      <li>
+	        Interlinea ottimale
+	      </li>
+	      <li>
+	        Formattazione degli elementi di testo (liste, enfasi, etc)
+	      </li>
+	    </ul>
+	  </div>
+	  <div class="show-source">
+	    <div class="container with-content">
+	      <div class="text-container">
+	        <p>
+				<em>Questo elemento ha classe <code>text-container</code></em>
+	        </p>
+	        <p>
+	          As I was groping to remove the chain from about my victim's neck I glanced up into the darkness to see six pairs of gleaming eyes fixed, unwinking, upon me. Slowly they approached and slowly I shrank back from the awful horror of them. Back into my corner I crouched holding my hands palms out, before me, and stealthily on came the awful eyes until they reached the dead body at my feet. <em>Then slowly they retreated</em> but this time with a strange grating sound and finally they disappeared in some black and distant recess of my dungeon.
+	        </p>
+	        <p>
+	          Slowly I regained my composure and finally essayed again to attempt to remove the keys from the dead body of my former jailer. But as I reached out into the darkness to locate it I found to my horror that it was gone. <strong>Then the truth flashed on me</strong>; the owners of those gleaming eyes had dragged my prize away from me to be devoured in their neighboring lair; as they had been waiting for days, for weeks, for months, through all this awful eternity of my imprisonment to drag my dead carcass to their feast.
+	        </p>
+	        <ul>
+	          <li>
+	            Lorem ipsum.
+	          </li>
+	          <li>
+	            Molestiae qui.
+	          </li>
+	          <li>
+	            Mollitia odit.
+	          </li>
+	          <li>
+	            Earum saepe.
+	          </li>
+	        </ul>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="container with-content text-container v-padded">
+	    <h3 class="hanging h2-number-1" data-h2-id="h2-number-1">Allineamento del testo</h3>
+	    <p>
+	      Il testo è allineato di base a sinistra, a bandiera.
+	    </p>
+	    <p>
+	      È possibile allineare il testo <em>al centro</em> con la classe <code>align-center</code>.
+	      <br>
+	      È possibile allineare il testo <em>a destra</em> con la classe <code>align-right</code>.
+	    </p>
+	  </div>
+	  <div class="show-source">
+	    <div class="container with-content v-padded-half">
+	      <div class="text-container align-right">
+	        <p>
+	          <em>Questo elemento ha classe <code>
+	            text-container</code> e <code>
+	            align-right</code></em>
+	        </p>
+	        <p>
+	          Slowly I regained my composure and finally essayed again to attempt to remove the keys from the dead body of my former jailer. But as I reached out into the darkness to locate it I found to my horror that it was gone. Then the truth flashed on me; the owners of those gleaming eyes had dragged my prize away from me to be devoured in their neighboring lair; as they had been waiting for days, for weeks, for months, through all this awful eternity of my imprisonment to drag my dead carcass to their feast.
+	        </p>
+	      </div>
+	    </div>
+	    <div class="container with-content v-padded-half">
+	      <div class="text-container align-center">
+	        <p>
+	          <em>Questo elemento ha classe <code>
+	            text-container</code> e <code>
+	            align-right</code></em>
+	        </p>
+	        <p>
+	          Slowly I regained my composure and finally essayed again to attempt to remove the keys from the dead body of my former jailer. But as I reached out into the darkness to locate it I found to my horror that it was gone. Then the truth flashed on me; the owners of those gleaming eyes had dragged my prize away from me to be devoured in their neighboring lair; as they had been waiting for days, for weeks, for months, through all this awful eternity of my imprisonment to drag my dead carcass to their feast.
+	        </p>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="container with-content text-container v-padded">
+	    <h3 class="hanging h2-number-2" data-h2-id="h2-number-2">Dimensione del testo</h3>
+	    <p>
+	      La dimensione del testo può essere regolata applicando queste classi:
+	    </p>
+	  </div>
+	  <div class="show-source">
+	    <div class="container with-content v-padded-half align-center">
+	      <ul class="n-up up-2 ">
+	        <li>
+	          <div class="filled padded text-container">
+	            Testo normale
+	          </div>
+	        </li>
+	        <li>
+	          <div class="filled padded text-container huge-text">
+	            Testo gigante
+	            <br>
+	            <code>
+	              .huge-text</code>
+	          </div>
+	        </li>
+	        <li>
+	          <div class="filled padded text-container big-text">
+	            Testo grande
+	            <br>
+	            <code>
+	              .big-text</code>
+	          </div>
+	        </li>
+	        <li>
+	          <div class="filled padded text-container small-text">
+	            Testo piccolo
+	            <br>
+	            <code>
+	              .small-text</code>
+	          </div>
+	        </li>
+	        <li>
+            <div class="filled padded text-container tiny-text">
+              Testo minuscolo
+              <br>
+              <code>
+                .tiny-text</code>
+            </div>
+          </li>
+	      </ul>
+	    </div>
+	  </div>
+	  <div class="container with-content text-container v-padded">
+	    <h3 class="hanging h2-number-3" data-h2-id="h2-number-3">Note legali /
+	    <br>
+	    testo scorrevole</h3>
+	    <p>
+	      Per includere lunghi brani di testo di importanza minore, senza occupare spazio nella pagina, applicare al blocco di testo la classe <code>legal</code>
+	    </p>
+	  </div>
+	  <div class="show-source">
+	    <div class="container with-content width-50 filled padded">
+	      <div class="legal">
+	        <p>
+	          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus nobis illo error ex expedita provident possimus vel sint inventore nihil rerum iure ullam laudantium quidem quos corrupti blanditiis magnam libero.
+	        </p>
+	        <p>
+	          Officia fugiat exercitationem fuga illo non nostrum quisquam culpa id ab blanditiis quam quibusdam tenetur sequi repudiandae ipsam alias reiciendis doloribus temporibus expedita doloremque ea laudantium neque amet inventore dolores!
+	        </p>
+	        <p>
+	          Neque repellat quis aspernatur nulla quas aut eaque illo tempore nam exercitationem quasi cupiditate tenetur eius. Laborum officia nobis quisquam alias voluptate beatae architecto ipsa recusandae labore debitis dolor ducimus?
+	        </p>
+	        <p>
+	          Fuga praesentium ut eaque aliquam facere amet cumque accusamus optio id possimus ducimus debitis. Omnis minima dolorum quo ullam maiores officia fuga quasi illo possimus praesentium hic consectetur perferendis. Illo!
+	        </p>
+	        <p>
+	          Nam iure voluptatem eligendi dolorum quibusdam exercitationem ex maiores quidem impedit eos cum suscipit esse repellendus! Ratione et est deleniti quam. Quaerat praesentium quos fugiat sint explicabo dolore exercitationem assumenda!
+	        </p>
+	      </div>
+	    </div>
+	  </div>
+      
+      <!-- Fine Text Blocks -->
+      
+      <!-- Inizio Header + Menu -->
+      
+      <div class="container with-content text-container v-padded">
+	  	<h2>Header + Menu</h2>
+	    <h3 class="hanging">CSS Header</h3>
+	    <p>
+	      Per avere una header già stilata a livello di CSS crea un tag <code>header</code> ed aggiungi ad esso la classe <code>top-nav-bar</code>.
+	    </p>
+	    <p>
+	    	Per impostare l'altezza della header bisogna modificare il valore della variabile <code>$logoHeight</code>, che puoi trovare all'interno di <code>_measures.scss</code>.
+    	</p>
+	    <p>
+	    	Di base, l'altezza della header sotto i 1023px di larghezza della viewport viene dimezzata. Sei vuoi assegnare un'altezza diversa bisogna cambiare il valore della variabile <code>$logoHeight</code>, che puoi trovare all'interno di <code>_mobile.scss</code>.
+    	</p>
+	  </div>
+      
+      <!-- Sticky Header -->
+      
+      <div class="container with-content text-container v-padded">
+	    <h3 class="hanging">Sticky Header</h3>
+	    <p>
+	      Per ottenere una header sempre posizionata al top della pagina, anche quando essa viene scrollata, si aggiunge ad header la classe <code>sticky-header</code>.
+	    </p>
+	    <p>Per evitare che il contenuto HTML che viene dopo la header appaia parzialmente coperto dalla header posizionata fissa al top della pagina, si aggiunge ad essa la classe <code>page-header</code>.
+	    <p>Questa classe CSS fa partire il Javascript che calcola l'altezza dell'header. L'altezza calcolata viene inserita come padding-top del contenuto che viene dopo.</p>
+	  </div>
+	  
+	  <!-- Fine Sticky Header -->
+	  
+	  <!-- Inizio Struttura Header -->
+	  
+	  <div class="container with-content text-container v-padded">
+	    <h3 class="hanging">Struttura HTML dell'Header</h3>
+	    <p>
+	      La struttura HTML base dell'header è la seguente:
+	    </p>
+	    <div class="show-source no-preview">
+<header class="top-nav-bar">		
+	<div class="container">
+		<div class="row">
+			<div class="col-3">
+				<h1>Mattarello 1.0</h1>
+			</div>
+			<div class="col-9 full-menu">					
+				<nav class="primary-menu"></nav>							
+			</div>
+		</div>					
+	</div>
+</header>
+	    </div>
+	    <p>La colonna con al suo interno il menu deve avere la classe <code>full-menu</code>.</p>
+	  </div>
+	  
+	  
+	  <!-- Fine Struttura Header -->
+	  
+	  <!-- Inizio Secondary Menu -->
+	  
+	  <div class="container with-content text-container v-padded">
+	    <h3 class="hanging">Secondary Menu</h3>
+	    <p>
+	      Per stilare un menu secondario si aggiunge la classe <code>secondary-menu</code> all'interno di <code>div.full-menu</code>:
+	    </p>
+	    <div class="show-source no-preview">
+<div class="col-9 full-menu">	
+	<nav class="secondary-menu"></nav>				
+	<nav class="primary-menu"></nav>							
+</div>
+		</div>
+	  </div>
+	  
+	  <!-- Fine Secondary Menu -->
+	  
+	  <!-- Inizio Mobile Menu -->
+	  
+	  <div class="container with-content text-container v-padded">
+	    <h3 class="hanging">Mobile Menu</h3>
+	    <p>
+	      Il codice HTML per attivare il menu mobile va inserito nello stesso div dove è presente l'h1:
+      	</p>
+      	<div class="show-source no-preview">
+<div class="col-3">
+	<h1>Mattarello 1.0</h1>
+  <div class="hamburger mobile-menu-trigger">
+    <?xml version="1.0" encoding="UTF-8"?>
+    <svg enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+      <path d="m491.32 235.32h-470.64c-11.422 0-20.682 9.259-20.682 20.682s9.26 20.682 20.682 20.682h470.64c11.423 0 20.682-9.259 20.682-20.682 0-11.422-9.259-20.682-20.682-20.682z" />
+      <path d="m491.32 78.439h-470.64c-11.422 0-20.682 9.26-20.682 20.682s9.26 20.682 20.682 20.682h470.64c11.423 0 20.682-9.26 20.682-20.682s-9.259-20.682-20.682-20.682z" />
+      <path d="m491.32 392.2h-470.64c-11.422 0-20.682 9.259-20.682 20.682s9.26 20.682 20.682 20.682h470.64c11.423 0 20.682-9.259 20.682-20.682s-9.259-20.682-20.682-20.682z" />
+    </svg>
+    <div class="svg-close">
+      <?xml version="1.0" encoding="UTF-8"?>
+      <svg enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+        <path d="m505.94 6.058c-8.077-8.077-21.172-8.077-29.249 0l-470.64 470.64c-8.077 8.077-8.077 21.172 0 29.249 4.038 4.04 9.332 6.058 14.625 6.058s10.586-2.019 14.625-6.059l470.64-470.64c8.076-8.076 8.076-21.171 0-29.248z" />
+        <path d="m505.94 476.69l-470.64-470.64c-8.076-8.077-21.172-8.077-29.248 0-8.077 8.076-8.077 21.171 0 29.248l470.64 470.64c4.038 4.039 9.332 6.058 14.625 6.058s10.587-2.019 14.624-6.057c8.075-8.078 8.075-21.173-1e-3 -29.25z" />
+      </svg>
+    </div>
+  </div>
+</div>
+	  	</div>
+  		<p>Per cambiare il colore dell'hamburger basta andare in <code>_palette.scss</code> e modificare <code>$hamburgerColor</code>.</p>
+	  	
+	  </div>
+	  
+	  <!-- Fine Mobile Menu -->	  
+	  
+	  <!-- Inizio Breadcrumb -->
+	  
+	  <div class="container with-content text-container v-padded">
+	    <h3 class="hanging">Breadcrumb</h3>
+	    <p>
+	      Per stilare una breadcrumb si crea un div con classe <code>page-title-wrapper</code>, con al suo interno un tag nav ed una ul con classe <code>breadcrumbs</code>:
+	    </p>
+	    <div class="show-source">
+<div class="page-title-wrapper">
+	<div class="container with-content">
+		<nav role="navigation">
+			<ul class="breadcrumbs">
+				<li><a href="">Home</a></li>
+				<li><a href="">Pagina padre</a></li>
+			</ul> 
+		</nav>
+		<h1>Titolo pagina</h1>
+	</div>
+</div>
+	    </div>
+	  </div>
+	  
+	  <!-- Fine Breadcrumb -->
+	  
+	  <!-- Inizio Breadcrumb + Child Menu -->
+	  
+	  <div class="container with-content text-container v-padded">
+	    <h3 class="hanging">Breadcrumb con Child Menu</h3>
+	    <p>
+	      Se la pagina HTML ha dei figli, nel <code>page-title-wrapper</code> dove è presente la breadcrumb si aggiunge anche un child menu:
+	    </p>
+	    <div class="show-source">
+<div class="page-title-wrapper">
+	<div class="container with-content"> 
+		<nav role="navigation">
+			<ul class="breadcrumbs">
+				<li><a href="">Home</a></li>
+				<li><a href="">Pagina padre</a></li>
+			</ul> 
+		</nav>
+		<h1>Titolo pagina</h1>
+		<nav role="navigation">
+			<ul class="children-menu">
+				<li><a href="">Pagina figlia 1</a></li>
+				<li><a href="">Pagina figlia 2</a></li>
+				<li><a href="">Pagina figlia 3</a></li>
+			</ul> 
+		</nav>
+	</div>
+</div>	
+	    </div>
+	    <p>Per cambiare i colori della barra della breadcrumb e del children menu in negativo al div <code>page-title-wrapper</code> si aggiunge la classe <code>negative</code>.</p>
+	  </div>
+	  
+	  <!-- Fine Breadrumb + Child Menu -->
+      
+      <!-- Fine Menu -->
+      
+      <!-- Inizio Form -->
+      
+      <div class="container with-content text-container v-padded">
+	  	<h2>Form</h2>
+	  	
+	  	<!-- Inizio Input Text -->
+	  	
+	    <h3 class="hanging">Text Field</h3>
+	    <p>Esempio di input text
+	    </p>
+	  </div>
+      
+      <div class="show-source">
+	    <div class="container text-container">
+	      
+	      	<div class="row webform-layout-box horiz webform-component--group-your-data--wrapper-your-data--row-email">
+		      	<div class="field-container full-width-fields col-12 field-email field-with-icon field-icon-email form-item webform-component webform-component-email webform-component--group-your-data--wrapper-your-data--row-email--email required"> 
+		      		<label class="element-invisible" for="edit-submitted-group-your-data-wrapper-your-data-row-email-email">E-Mail 
+		      			<span class="form-required" title="Questo campo è obbligatorio.">*</span>
+	      			</label> <input required="required" class="email form-text form-email required" placeholder="e-mail" type="email" id="edit-submitted-group-your-data-wrapper-your-data-row-email-email" name="submitted[group_your_data][wrapper_your_data][row_email][email]" size="60" autocomplete="off">
+	  			</div>
+			</div>
+	      
+	    </div>
+	  </div>
+	  
+	  <!-- Fine Input Text -->
+	  
+	  <!-- Inizio Select -->
+	  <div class="container with-content text-container v-padded">
+	  	<h3 class="hanging">Select</h3>
+	    <p>Esempio di selezione a tendina
+	    </p>
+	  </div>
+      
+      <div class="show-source">
+	    <div class="container text-container">
+	      
+	      <div class="row webform-layout-box horiz webform-component--row-source"><div class="field-container col-12 field-inline-label form-item webform-component webform-component-select webform-component--row-source--source"> <label for="edit-submitted-row-source-source">Dove ci hai trovato? </label> <select id="edit-submitted-row-source-source" name="submitted[row_source][source]" class="form-select"><option value="" selected="selected">- Nessuno -</option><option value="2">Banner (pubblicità sul web)</option><option value="5">Giornali e riviste</option><option value="3">Spot in TV</option><option value="4">Radio</option><option value="8">Altro</option><option value="0">Motori di ricerca (es. Google, Bing)</option><option value="6">Email</option><option value="1">Social Network (es. Facebook, Twitter, YouTube)</option><option value="7">Dialogatori in strada</option></select></div></div>
+	      
+	    </div>
+	  </div>
+
+	  
+	  <!-- Fine Select -->
+	  
+	  <!-- Inizio Radio Button -->
+	  <div class="container with-content text-container v-padded">
+	  	<h3 class="hanging">Radio Button</h3>
+	    <p>Esempio di radio button
+	    </p>
+	  </div>
+      
+      <div class="show-source">
+	    <div class="container text-container">
+	      
+	      <div class="row webform-layout-box horiz webform-component--row-frequency"><div class="field-container col-12 radio-options field-recurring-frequency field-inline-label hide-required form-item webform-component webform-component-radios webform-component--row-frequency--frequency"> <label for="edit-submitted-row-frequency-frequency">Periodicità <span class="form-required" title="Questo campo è obbligatorio.">*</span></label><div id="edit-submitted-row-frequency-frequency" class="form-radios mobile-stacked as-buttons"><div class="form-item form-type-radio form-item-submitted-row-frequency-frequency"> <input required="required" class="mobile-stacked form-radio" type="radio" id="edit-submitted-row-frequency-frequency-1" name="submitted[row_frequency][frequency]" value="1" checked="checked"> <label class="option" for="edit-submitted-row-frequency-frequency-1">Mensile </label></div><div class="form-item form-type-radio form-item-submitted-row-frequency-frequency"> <input required="required" class="mobile-stacked form-radio" type="radio" id="edit-submitted-row-frequency-frequency-2" name="submitted[row_frequency][frequency]" value="3"> <label class="option" for="edit-submitted-row-frequency-frequency-2">Trimestrale </label></div><div class="form-item form-type-radio form-item-submitted-row-frequency-frequency"> <input required="required" class="mobile-stacked form-radio" type="radio" id="edit-submitted-row-frequency-frequency-3" name="submitted[row_frequency][frequency]" value="6"> <label class="option" for="edit-submitted-row-frequency-frequency-3">Semestrale </label></div><div class="form-item form-type-radio form-item-submitted-row-frequency-frequency"> <input required="required" class="mobile-stacked form-radio" type="radio" id="edit-submitted-row-frequency-frequency-4" name="submitted[row_frequency][frequency]" value="12"> <label class="option" for="edit-submitted-row-frequency-frequency-4">Annuale </label></div></div></div></div>
+	      
+	    </div>
+	  </div>
+
+	  
+	  <!-- Fine Radio Button -->
+      
+      <!-- Fine Form -->
+
+
+    </div>  <!-- fine main-content-wrapper -->
+
+  </body>
+</html>
